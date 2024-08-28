@@ -2,7 +2,7 @@
   "full_name": "Simon Dirmeier",
   "email": "sfyrbnd @ pm me",
   "github_username": "dirmeier",
-  "project_name": "Rye package template",
+  "project_title": "Rye package template",
   "project_short_description": "A rye package that does nothing so far",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "pypi_username": "{{ cookiecutter.github_username }}",
