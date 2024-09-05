@@ -8,11 +8,9 @@ description = "{{cookiecutter.project_short_description}}"
 authors = [{name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}]
 readme = "README.md"
 license = {file = "LICENSE"}
-keywords = []
 classifiers = [
     "Development Status :: 1 - Planning",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
 ]
@@ -21,18 +19,15 @@ dependencies = [
 ]
 dynamic = ["version"]
 
-[project.urls]
-homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
-
-[tool.rye]
-managed = true
-dev-dependencies = []
-
 [tool.setuptools]
 packages = ["{{cookiecutter.project_slug}}"]
 
 [tool.setuptools.dynamic]
 version = {attr = "{{cookiecutter.project_slug}}.__init__.__version__"}
+
+[tool.rye]
+managed = true
+dev-dependencies = []
 
 [tool.bandit]
 skips = ["B101"]
@@ -42,10 +37,8 @@ line-length = 80
 exclude = ["*_test.py", "docs/**", "examples/**"]
 
 [tool.ruff.lint]
-select = ["E", "F"]
+select = ["E4", "E7", "E9", "F"]
 extend-select = [
-  "UP", "D", "I", "PL", "S"
+  "UP", "I", "PL", "S"
 ]
-
-[tool.ruff.lint.pydocstyle]
-convention= 'google'
+ignore = ["S301", "PLR0913", "S101", "PLR2004", "S603", "S607"]

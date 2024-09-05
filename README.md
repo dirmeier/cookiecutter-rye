@@ -2,7 +2,7 @@
 
 [![Project Status](http://www.repostatus.org/badges/latest/concept.svg)](http://www.repostatus.org/#concept)
 
-> My template for Python packages built with Rye
+> My template for Python apps built with Rye
 
 ## About
 
