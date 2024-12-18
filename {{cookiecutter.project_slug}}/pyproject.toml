@@ -25,8 +25,7 @@ packages = ["{{cookiecutter.project_slug}}"]
 [tool.setuptools.dynamic]
 version = {attr = "{{cookiecutter.project_slug}}.__init__.__version__"}
 
-[tool.rye]
-managed = true
+[tool.uv]
 dev-dependencies = []
 
 [tool.bandit]
